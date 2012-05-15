@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "gateway-memcache"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Aaron Qian"]
-  s.date = "2012-02-10"
+  s.date = "2012-05-15"
   s.description = " Gateway wrapper for memcache-client "
   s.email = "aq1018@gmail.com"
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "gateway-memcache.gemspec",
     "lib/gateway-memcache.rb",
     "lib/gateway/memcache.rb",
     "spec/gateway-memcache_spec.rb",
@@ -32,7 +33,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/aq1018/gateway-memcache"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.19"
   s.summary = "Gateway wrapper for memcache-client"
 
   if s.respond_to? :specification_version then

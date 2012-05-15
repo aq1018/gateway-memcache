@@ -13,11 +13,17 @@ module Gateway
       end
     end
 
-    def set(id, value, expiration=0, raw = false)
+    def set(id, value, expiration=nil, raw = false)
       opts = {:retry => false}
+      ttl = expiration || default_expiration
+
       execute(:set, id, opts) do |conn|
-        conn.set(id, value, expiration, raw)
+        conn.set(id, value, ttl, raw)
       end
+    end
+
+    def default_expiration
+      options.fetch :expiration, 0
     end
 
     protected

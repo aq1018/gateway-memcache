@@ -48,5 +48,13 @@ module Gateway
       # external control only making things worse
       #conn.reset
     end
+
+    def success_status(resp)
+      resp ? 200 : 404
+    end
+
+    def success_message(resp)
+      resp ? 'HIT' : 'MISS'
+    end
   end
 end
